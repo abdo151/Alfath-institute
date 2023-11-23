@@ -40,12 +40,12 @@ body {
 }
 /* end global rules  */
 /* start static class */
-  .show {
-    display: none;
-  }
-  .hidden {
-    display: none;
-  }
+.show {
+  display: none;
+}
+.hidden {
+  display: none;
+}
 /* end static class */
 /* start header */
 .header {
@@ -98,6 +98,7 @@ body {
   right: 0;
   top: calc(100% + 15px);
   background-color: var(--main-background-color);
+ z-index: 1;
   min-width: 250px;
 }
 .header .container .links ul::before {
@@ -129,3 +130,32 @@ body {
   color: var(--main-color);
 }
 /* end  header*/
+/* start landing */
+.landing {
+  background-image: url(assets/images/web-05.png);
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
+}
+.landing .intro-text {
+  color: var(--main-color);
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 350px;
+  text-align: center;
+}
+.landing .intro-text h1 {
+  margin: 0;
+  font-size: 50px;
+}
+.landing .intro-text p {
+  line-height: 1.9;
+}
+/* end landing */
