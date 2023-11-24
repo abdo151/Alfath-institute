@@ -1,8 +1,17 @@
 /* start varible */
 :root {
   --main-background-color: #142d4f;
+  --second-background-color: #f3b525;
   --main-transition-duration: 0.3s;
-  --main-color: #fae8e8;
+  --main-color: #fafafa;
+  --main-padding-top: 60px;
+  --main-padding-bottom: 60px;
+  --main-padding-info: 20px;
+  --main-border-size: 1.5px;
+  --main-border-style: solid;
+  --main-border-color: #d9d9d9b4;
+  --main-border-radius-card: 10%;
+  --main-margin-bottom-card-media: 30px;
 }
 /* end varible */
 /* start global rules */
@@ -12,8 +21,196 @@
 }
 body {
   font-family: "Work Sans", sans-serif;
+  overflow-x: hidden;
+}
+.special_heading {
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  text-align: center;
+}
+.special_heading > h2 {
+  width: 20%;
+  margin: 0 auto;
+  font-size: 35px;
+  color: var(--main-color);
+  background-color: var(--second-background-color);
+  position: relative;
+  transition: all var(--main-transition-duration);
+  -webkit-transition: all var(--main-transition-duration);
+  -moz-transition: all var(--main-transition-duration);
+  -ms-transition: all var(--main-transition-duration);
+  -o-transition: all var(--main-transition-duration);
+  z-index: 1;
+}
+@media (max-width: 1199px) {
+  .special_heading > h2 {
+    width: 40%;
+    font-size: 25px;
+  }
+}
+@media (max-width:  450px) {
+  .special_heading > h2 {
+    width: fit-content;
+    font-size: 18px;
+  }
+}
+.special_heading > h2:hover {
+  color: var(--main-background-color);
+  width: 40%;
+  font-size: 45px;
+}
+@media (max-width: 1199px) {
+  .special_heading > h2:hover {
+    width: 50%;
+    font-size: 35px;
+  }
+}
+@media (max-width: 450px) {
+  .special_heading > h2:hover {
+    width: 50%;
+    font-size: 25px;
+  }
+}
+.special_heading > h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30%;
+  width: 15px;
+  height: 15px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--main-color);
+  transition: all var(--main-transition-duration);
+  -webkit-transition: all var(--main-transition-duration);
+  -moz-transition: all var(--main-transition-duration);
+  -ms-transition: all var(--main-transition-duration);
+  -o-transition: all var(--main-transition-duration);
+  z-index: -1;
+}
+.special_heading > h2:hover::after {
+  color: var(--main-color);
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(0%);
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+}
+.special_heading > h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -30%;
+  width: 15px;
+  height: 15px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--main-color);
+  transition: all var(--main-transition-duration);
+  -webkit-transition: all var(--main-transition-duration);
+  -moz-transition: all var(--main-transition-duration);
+  -ms-transition: all var(--main-transition-duration);
+  -o-transition: all var(--main-transition-duration);
+  z-index: -1;
+}
+.special_heading > h2:hover::before {
+  color: var(--main-color);
+  width: 50%;
+  height: 100%;
+  top: 0;
+  transform: translateY(0%);
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  -webkit-border-radius: 0;
+  right: 0;
+}
+.special_heading > p {
+  color: var(--main-color);
+  margin: 30px auto 45px;
+  width: 100%;
+  line-height: 1.5;
+  font-size: 25px;
+  font-weight: 200;
+}
+@media (max-width:767px) {
+  .special_heading > p {
+    margin: 20px auto 25px;
+    width: 100%;
+    line-height: 1.4;
+    font-size: 19px;
+  }
+}
+/* start buttons */
+/* -- start button in course card */
+a.button {
+  text-decoration: none;
+  color: black;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.button {
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.button::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.button:hover::before {
+  width: 9em;
+}
+/* --  end button in course card */
+/* end buttons */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -98,7 +295,7 @@ body {
   right: 0;
   top: calc(100% + 15px);
   background-color: var(--main-background-color);
- z-index: 1;
+  z-index: 1;
   min-width: 250px;
 }
 .header .container .links ul::before {
@@ -132,7 +329,7 @@ body {
 /* end  header*/
 /* start landing */
 .landing {
-  background-image: url(assets/images/web-05.png);
+  background-image: url(assets/images/cover\ web-02.jpg);
   background-size: cover;
   height: calc(100vh - 64px);
   position: relative;
@@ -159,3 +356,91 @@ body {
   line-height: 1.9;
 }
 /* end landing */
+/* start courses */
+.courses {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--main-background-color);
+}
+.courses .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 50px;
+}
+@media (max-width:767px) {
+  .courses .container  {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+.courses .container .course {
+  border: var(--main-border-size) var(--main-border-color)
+    var(--main-border-style);
+  background-color: var(--main-color);
+  border-radius: var(--main-border-radius-card);
+  -webkit-border-radius: var(--main-border-radius-card);
+  -moz-border-radius: var(--main-border-radius-card);
+  -ms-border-radius: var(--main-border-radius-card);
+  -o-border-radius: var(--main-border-radius-card);
+  overflow: hidden;
+  transition: all var(--main-transition-duration);
+  -webkit-transition: all var(--main-transition-duration);
+  -moz-transition: all var(--main-transition-duration);
+  -ms-transition: all var(--main-transition-duration);
+  -o-transition: all var(--main-transition-duration);
+}
+@media (max-width: 991px) {
+  .courses .container .course {
+    margin-bottom: var(--main-margin-bottom-card-media);
+    margin-top: var(--main-margin-bottom-card-media);
+  }
+}
+.courses .container .course:hover {
+  transform: translateY(-30px);
+  -webkit-transform: translateY(-30px);
+  -moz-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  -o-transform: translateY(-30px);
+}
+.courses .container .course .image {
+  overflow: hidden;
+}
+.courses .container .course img {
+  height: 100%;
+  width: 100%;
+  filter: blur(2px) brightness(0.4);
+  -webkit-filter: blur(2px) brightness(0.4);
+  transition: all var(--main-transition-duration);
+  -webkit-transition: all var(--main-transition-duration);
+  -moz-transition: all var(--main-transition-duration);
+  -ms-transition: all var(--main-transition-duration);
+  -o-transition: all var(--main-transition-duration);
+}
+.courses .container .course:hover img {
+  filter: blur(0px) brightness(1);
+  -webkit-filter: blur(0px) brightness(1);
+  transform: scale(1.5, 1.5);
+  -webkit-transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+}
+
+.courses .container .course .text_info {
+  background-color: var(--main-color);
+  text-align: center;
+  padding: var(--main-padding-info);
+  position: relative;
+}
+.courses .container .course .text_info h3 {
+  margin: 5px auto 10px;
+}
+.courses .container .course .text_info p {
+  margin: 0 auto;
+}
+/* end courses */
+/* start  this for arabic page  */
+.arabic-content {
+  background: var(--main-background-color);
+  color: var(--main-color);
+}
+/*  end this for arabic page  */
