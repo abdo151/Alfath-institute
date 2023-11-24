@@ -1,13 +1,24 @@
-//start header
+// start header
 let menu = document.querySelector(".header .container .links ul");
-console.log(menu);
 let icons = document.querySelector(".header .container .links .icons");
-console.log(icons);
-function showAndHidden(e) {
-  e.target.classList.toggle("hidden");
+
+// Toggle menu visibility
+function toggleMenu() {
+  menu.classList.toggle("hidden");
 }
 
-icons.addEventListener("click", (_) => {
-  menu.classList.toggle("hidden");
+// Event listener for the menu icon click
+icons.addEventListener("click", (event) => {
+  // Prevent clicks from being detected outside the icons
+  event.stopPropagation();
+  toggleMenu();
 });
-//end header
+
+// Event listener for the document
+document.addEventListener("click", (event) => {
+  // If the click target is not the menu or its children, and the menu is not hidden, hide it
+  if (!menu.contains(event.target) && !menu.classList.contains("hidden")) {
+    toggleMenu();
+  }
+});
+// end header
