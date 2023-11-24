@@ -465,14 +465,20 @@ a.button {
 /* start  this for arabic page  */
 
 .arabic-content {
-  /* background: var(--main-background-color); */
-  color: var(--main-background-color);
+  background: var(--main-background-color);
+  color: var(--main-color);
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
 }
 .arabic-content .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  gap: 10px 20px;
   padding: var(--main-padding-top) auto var(--main-padding-bottom);
+}
+@media (max-width: 767px) {
+  .arabic-content .container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 .arabic-content .container .image {
   overflow: hidden;
