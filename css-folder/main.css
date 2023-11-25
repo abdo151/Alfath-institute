@@ -352,7 +352,7 @@ a.button {
 /* end  header*/
 /* start landing */
 .landing {
-  background-image: url(assets/images/cover\ web-02.jpg);
+  background-image: url(assets/images/1.jpg);
   background-size: cover;
   height: calc(100vh - 64px);
   position: relative;
@@ -378,6 +378,32 @@ a.button {
 .landing .intro-text p {
   line-height: 1.9;
 }
+.landing .toggle-icon {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landing .toggle-icon div {
+  background-color: var(--main-background-color);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+.landing .toggle-icon div.active {
+  border: calc(var(--main-border-size) * 1.5) var(--main-border-style)
+    var(--main-background-color);
+  background-color: var(--second-background-color);
+}
+
 /* end landing */
 /* start courses */
 .courses {
@@ -472,8 +498,7 @@ a.button {
 }
 .arabic-content .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  padding: var(--main-padding-top) auto var(--main-padding-bottom);
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 }
 @media (max-width: 767px) {
   .arabic-content .container {
