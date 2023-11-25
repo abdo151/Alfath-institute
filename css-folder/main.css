@@ -358,7 +358,7 @@ a.button {
   position: relative;
 }
 .landing .intro-text {
-  color: var(--main-color);
+  color: var(--main-background-color);
   position: absolute;
   top: 50%;
   left: 30%;
