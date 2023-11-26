@@ -614,11 +614,33 @@ a.button {
 }
 .about .container .about-content-text .text h2 {
   margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  width: fit-content;
   font-size: 33px;
   color: var(--main-background-color);
   text-align: center;
   margin-bottom: var(--main-margin-bottom-card-media);
   font-weight: 900;
+  position: relative;
+}
+.about .container .about-content-text .text h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: var(--second-background-color);
+  transition: all var(--main-transition-duration);
+  -webkit-transition: all var(--main-transition-duration);
+  -moz-transition: all var(--main-transition-duration);
+  -ms-transition: all var(--main-transition-duration);
+  -o-transition: all var(--main-transition-duration);
+}
+.about .container .about-content-text .text:hover h2::before {
+  width: 100%;
+  height: var(--main-border-frame-size);
 }
 .about .container .about-content-text .text .text-info-1 {
   font-size: 20px;
@@ -675,6 +697,14 @@ a.button {
     color: var(--font-color-text-3);
   }
 }
+.about .container .about-content-video .special_heading > h2 {
+}
+.about .container .about-content-video .special_heading > P {
+  margin-bottom: 10px;
+  color: var(--main-background-color);
+  font-weight: 400;
+}
+
 .about .container .about-content-video video {
   width: 100%;
   height: 100%;
@@ -686,6 +716,7 @@ a.button {
   -ms-border-radius: 5%;
   -o-border-radius: 5%;
 }
+.about .container .about-content-video .special_heading 
 /* end about */
 /* start  this for arabic course  page  */
 
