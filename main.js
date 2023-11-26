@@ -22,21 +22,20 @@ document.addEventListener("click", (event) => {
   }
 });
 // end header
-//start landing random slider
-let rand = Math.floor(Math.random() * (4 - 0 + 1)) + 0;
-let landing = document.querySelector(".landing");
-let toggle_icon = document.querySelectorAll(".landing .toggle-icon div");
-//add class active on click
-toggle_icon.forEach(function (ele, index) {
-  ele.onclick = function () {
-    toggle_icon.forEach(function (el) {
-      el.classList.remove("active");
-    });
-    ele.classList.add("active");
-    console.log(landing);
-
-    landing.style.backgroundImage = `url('css-folder/assets/images/${index + 1}.jpg')`;
-  };
-});
-
+//start landing
+let landing = document.querySelector(".landing-background");
+// // landing image change
+function change_background() {
+  let imageNum = 0;
+  function changeImage() {
+    imageNum++;
+    if (imageNum <= 5) {
+      landing.src = `css-folder/assets/images/${imageNum}.jpg`;
+    } else {
+      imageNum = 1;
+    }
+  }
+  setInterval(changeImage, 3000);
+}
+change_background();
 //end landing random slider
