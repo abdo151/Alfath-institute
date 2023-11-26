@@ -13,6 +13,9 @@
   --main-border-radius-card: 10%;
   --main-margin-bottom-card-media: 30px;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* end varible */
 /* start background image  */
 .background-image-2x {
