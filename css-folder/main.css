@@ -7,11 +7,15 @@
   --main-padding-top: 60px;
   --main-padding-bottom: 60px;
   --main-padding-info: 20px;
+  --main-border-frame-size: 4.5px;
   --main-border-size: 1.5px;
   --main-border-style: solid;
   --main-border-color: #d9d9d9b4;
   --main-border-radius-card: 10%;
   --main-margin-bottom-card-media: 30px;
+  --font-color-text-1: #a3a1a1;
+  --font-color-text-2: #595757;
+  --font-color-text-3: #1f1c1c;
 }
 html {
   scroll-behavior: smooth;
@@ -512,7 +516,178 @@ a.button {
   margin: 0 auto;
 }
 /* end courses */
-/* start  this for arabic page  */
+/* start about */
+.about {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.about .container {
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+}
+.about .container .about-content-text {
+  padding: 20px;
+  margin-bottom: calc(var(--main-margin-bottom-card-media) * 2);
+  position: relative;
+  border: var(--main-border-frame-size) var(--main-border-style)
+    var(--second-background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .about .container .about-content-text {
+    flex-direction: column;
+  }
+}
+.about .container .about-content-text::before {
+  content: "alfath";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--second-background-color);
+  font-size: 30px;
+  font-weight: bold;
+  top: 20%;
+  left: -35px;
+  width: 70px;
+  height: 70px;
+  background-color: var(--main-background-color);
+  border-radius: var(--main-border-radius-card);
+  -webkit-border-radius: var(--main-border-radius-card);
+  -moz-border-radius: var(--main-border-radius-card);
+  -ms-border-radius: var(--main-border-radius-card);
+  -o-border-radius: var(--main-border-radius-card);
+}
+@media (max-width: 991px) {
+  .about .container .about-content-text::before {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+}
+.about .container .about-content-text .image {
+  position: relative;
+  width: calc(50% - var(--main-margin-bottom-card-media));
+  border-radius: var(--second-background-color);
+  -webkit-border-radius: var(--second-background-color);
+  -moz-border-radius: var(--second-background-color);
+  -ms-border-radius: var(--second-background-color);
+  -o-border-radius: var(--second-background-color);
+}
+@media (max-width: 767px) {
+  .about .container .about-content-text .image {
+    margin-top: var(--main-padding-top);
+  }
+}
+.about .container .about-content-text .image::after {
+  content: "";
+  position: absolute;
+  width: 201px;
+  height: 206px;
+  top: -14%;
+  left: 10%;
+  border: var(--main-border-frame-size) var(--main-border-style)
+    var(--second-background-color);
+  background-color: transparent;
+  z-index: -1;
+}
+.about .container .about-content-text .image img {
+  width: 201px;
+  height: 206px;
+  max-width: 100%;
+  max-height: 100%;
+  border: var(--main-border-size) var(--main-border-style)
+    var(--main-border-color);
+  position: relative;
+  left: 20%;
+}
+.about .container .about-content-text .text {
+  flex: 1;
+  padding: var(--main-padding-info);
+}
+.about .container .about-content-text .text h2 {
+  margin: 0;
+  font-size: 33px;
+  color: var(--main-background-color);
+  text-align: center;
+  margin-bottom: var(--main-margin-bottom-card-media);
+  font-weight: 900;
+}
+.about .container .about-content-text .text .text-info-1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--font-color-text-1);
+  line-height: 1.3;
+}
+.about .container .about-content-text .text .text-info-1 span {
+  font-size: 25px;
+  font-weight: 600;
+  color: #595757;
+}
+.about .container .about-content-text .text hr {
+  margin-top: var(--main-margin-bottom-card-media);
+  margin-bottom: var(--main-margin-bottom-card-media);
+}
+.about .container .about-content-text .text .text-info-2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--font-color-text-1);
+  line-height: 1.2;
+}
+.about .container .about-content-text .text .text-info-2 span {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--font-color-text-3);
+}
+@media (max-width: 767px) {
+  .about .container .about-content-text .text h2 {
+    margin: 0;
+    font-size: 25px;
+    color: var(--main-background-color);
+    font-weight: 800;
+  }
+  .about .container .about-content-text .text .text-info-1 {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  .about .container .about-content-text .text .text-info-1 span {
+    font-size: 20px;
+    font-weight: 400;
+    color: #595757;
+  }
+  .about .container .about-content-text .text .text-info-2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--font-color-text-1);
+    line-height: 1.3;
+  }
+  .about .container .about-content-text .text .text-info-2 span {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--font-color-text-3);
+  }
+}
+.about .container .about-content-video video {
+  width: 100%;
+  height: 100%;
+  margin-top: var(--main-padding-top);
+  margin-bottom: var(--main-padding-bottom);
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+/* end about */
+/* start  this for arabic course  page  */
 
 .arabic-content {
   background: var(--main-background-color);
@@ -536,4 +711,5 @@ a.button {
   max-width: 100%;
   max-height: 100%;
 }
+
 /*  end this for arabic page  */
