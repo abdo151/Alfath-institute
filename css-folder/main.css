@@ -1,6 +1,6 @@
 /* start varible */
 :root {
-  --main-background-color: #142d4f;
+  --main-background-color: hsla(214, 59%, 19%, 1);
   --second-background-color: #f3b525;
   --second-background-color2: #ececec;
   --main-transition-duration: 0.3s;
@@ -439,7 +439,7 @@ a.button {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
   /* background-color: var(--main-background-color); */
-  background-color: hsla(214, 59%, 19%, 1);
+  background-color: rgba(20, 45, 77, 0.685);
 }
 .courses .container {
   display: grid;
