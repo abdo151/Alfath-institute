@@ -76,7 +76,7 @@ body {
 }
 @media (max-width: 1199px) {
   .special_heading > h2 {
-    width: 40%;
+    width: 50%;
     font-size: 25px;
   }
 }
@@ -88,8 +88,8 @@ body {
 }
 .special_heading > h2:hover {
   color: var(--main-background-color);
-  width: 40%;
-  font-size: 45px;
+  width: 50%;
+  font-size: 39px;
 }
 @media (max-width: 1199px) {
   .special_heading > h2:hover {
@@ -764,7 +764,8 @@ a.button {
   margin-bottom: 0;
 }
 .testimonials .testimonials-box-container .testimonials-box iframe {
-  width: 300px;
+  width: 100%;
+  max-width: 100%;
   height: 400px;
 }
 /* end testimonials */
@@ -781,7 +782,7 @@ a.button {
 }
 .footer .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 40px;
 }
 .footer .box h3 {
