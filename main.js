@@ -23,21 +23,21 @@ document.addEventListener("click", (event) => {
 });
 // end header
 //start landing
-let landing = document.querySelector(".landing-background");
-// // landing image change
-function change_background() {
-  let imageNum = 0;
-  function changeImage() {
-    imageNum++;
-    if (imageNum <= 5) {
-      landing.src = `css-folder/assets/images/${imageNum}.jpg`;
-    } else {
-      imageNum = 1;
-    }
-  }
-  setInterval(changeImage, 3000);
-}
-change_background();
+// let landing = document.querySelector(".landing-background");
+// // // landing image change
+// function change_background() {
+//   let imageNum = 0;
+//   function changeImage() {
+//     imageNum++;
+//     if (imageNum <= 5) {
+//       landing.src = `css-folder/assets/images/${imageNum}.jpg`;
+//     } else {
+//       imageNum = 1;
+//     }
+//   }
+//   setInterval(changeImage, 3000);
+// }
+// change_background();
 //end landing random slider
 
 // start our staff
