@@ -826,7 +826,7 @@ a.button {
   -ms-transform: var(--main-transition);
   -o-transform: var(--main-transition);
 }
-.stat-item .icon:hover {
+ .stat-item:hover .icon {
   color: var(--second-background-color);
 }
 .number {
