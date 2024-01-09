@@ -289,7 +289,12 @@ a.button {
   align-items: center;
 }
 .header .container .logo {
+  display: block;
+  text-decoration: none;
   width: 60px;
+}
+.header .container .logo img {
+  max-width: 100%;
 }
 .header .container .links {
   position: relative;
