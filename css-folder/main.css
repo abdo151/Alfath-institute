@@ -278,6 +278,10 @@ a.button {
 /* start header */
 .header {
   padding: 20px;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  z-index: 5000;
 }
 .header .container {
   display: flex;
@@ -388,7 +392,7 @@ a.button {
   width: 600px;
   text-align: center;
   padding: 5px;
-  z-index: -1;
+  z-index: 2;
 }
 .landing .landing-text h1 {
   color: #111e65;
@@ -431,8 +435,7 @@ a.button {
   }
 }
 @media (max-width: 991px) {
-/* any style you are need */
-
+  /* any style you are need */
 }
 @media (max-width: 768px) {
   .landing {
@@ -787,24 +790,46 @@ a.button {
 .testimonials .testimonials-box-container .testimonials-box {
   padding: 20px;
   background-color: white;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+}
+.testimonials .testimonials-box-container .testimonials-box:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  background-image: linear-gradient(260deg, #eb117c 0%, #69008d 100%);
+  color: white;
 }
 .testimonials .testimonials-box-container .testimonials-box > h3 {
   margin: 0 0 10px;
   text-transform: capitalize;
 }
+
 .testimonials .testimonials-box-container .testimonials-box > span {
   color: #777;
   margin-bottom: 10px;
   display: block;
   text-transform: uppercase;
 }
+.testimonials
+  .testimonials-box-container
+  .testimonials-box:not(.testimonials-box.testimonials-video)
+  > span {
+  margin-top: -25px;
+}
+.testimonials .testimonials-box-container .testimonials-box:hover span {
+  color: white;
+}
+.testimonials .testimonials-box-container .testimonials-box .rating {
+  color: #ffd700; /* Star rating color */
+  text-align: right;
+}
 .testimonials .testimonials-box-container .testimonials-box > p {
   line-height: 1.5;
   color: #777;
   margin-top: 10px;
   margin-bottom: 0;
+}
+.testimonials .testimonials-box-container .testimonials-box:hover p {
+  color: white;
 }
 .testimonials .testimonials-box-container .testimonials-box iframe {
   width: 100%;
@@ -981,7 +1006,67 @@ a.button {
 }
 
 /* end FAQ */
+/* start enroll widget */
 
+/* end enroll widget */
+.enroll-widget {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.enroll-widget .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .enroll-widget .container {
+    flex-direction: column;
+  }
+  .enroll-widget .container .image {
+    margin-bottom: 10px;
+  }
+}
+.enroll-widget .container .image {
+  overflow: hidden;
+  z-index: 3333;
+  flex: 1;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.enroll-widget .container .image img {
+  width: 650px;
+  height: 757px;
+  max-height: 100%;
+}
+@media (max-width: 767px) {
+  .enroll-widget .container .image img {
+    width: 450px;
+    height: 500px;
+    max-height: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .enroll-widget .container .image img {
+    width: calc(100% - 10px);
+    height: 500px;
+    max-height: 100%;
+  }
+}
+.enroll-widget .container .enroll-now {
+  text-align: center;
+  display: block;
+  background-color: hsl(241.07deg 94.38% 65.1%);
+  padding: 20px;
+  margin: 5px auto;
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 10px;
+}
 /* Start Footer */
 .footer {
   background-color: var(--main-background-color);
