@@ -63,6 +63,7 @@ body {
 .special_heading > h2 {
   width: 20%;
   margin: 0 auto;
+  text-transform: capitalize;
   font-size: 35px;
   color: var(--main-color);
   background-color: var(--second-background-color);
@@ -633,6 +634,102 @@ a.button {
   margin: 0 auto;
 }
 /* end courses */
+/* start part of lession  */
+.video-widget {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.video-widget .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.video-list {
+  border: 1px solid #ddd;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+.video-list h2 {
+  margin: 0 0 10px;
+  color: var(--main-background-color);
+  text-transform: capitalize;
+}
+
+.video-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.video-list li {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: bold;
+  transition: all var(--main-transition-duration);
+  -webkit-transition: all var(--main-transition-duration);
+  -moz-transition: all var(--main-transition-duration);
+  -ms-transition: all var(--main-transition-duration);
+  -o-transition: all var(--main-transition-duration);
+}
+.video-list li:hover {
+  background-color: var(--main-background-color);
+  color: var(--second-background-color);
+}
+
+.video-list li:hover {
+  background-color: #efefef;
+}
+
+.video-list span {
+  float: right;
+  opacity: 0.6;
+}
+
+.video-display {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.video-display .video-display-element {
+  height: calc(100% - 38.39px);
+}
+.video-display iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.video-title {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  flex: 2;
+  /* margin-bottom: 10px; */
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .video-widget .container {
+    flex-direction: column;
+  }
+  .video-widget .container .video-display {
+    height: 350px;
+  }
+  .video-widget .container .video-display .video-display-element  iframe{
+ height: 350px;
+  }
+}
+
+/* end part of lession  */
 /* start about */
 .about {
   padding-top: var(--main-padding-top);

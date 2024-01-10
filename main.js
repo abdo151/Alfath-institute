@@ -40,6 +40,20 @@ document.addEventListener("click", (event) => {
 // change_background();
 //end landing random slider
 
+// start part of lession
+
+function updateVideo(imageSrc, title) {
+  document.getElementById('video-img').src = imageSrc;
+  document.getElementById('video-img').alt = title;
+  document.getElementById('video-title').textContent = title;
+}
+
+
+
+// end part of lession
+
+
+
 // start our staff
 const counters = document.querySelectorAll(".number");
 const speed = 200; // The lower the slower
