@@ -724,8 +724,8 @@ a.button {
   .video-widget .container .video-display {
     height: 350px;
   }
-  .video-widget .container .video-display .video-display-element  iframe{
- height: 350px;
+  .video-widget .container .video-display .video-display-element iframe {
+    height: 350px;
   }
 }
 
@@ -1451,6 +1451,78 @@ a.button {
   height: 100%;
 }
 .arabic-content .container .image img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+/*  end this for arabic page  */
+/* start  this for about  page  */
+
+.about-content {
+  background: white;
+  color: var(--main-background-color);
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.about-content .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 50px;
+}
+.about-content .container .text {
+  line-height: 1.8;
+  font-size: 25px;
+  transition: all var(--main-transition);
+  -webkit-transition: all var(--main-transition);
+  -moz-transition: all var(--main-transition);
+  -ms-transition: all var(--main-transition);
+  -o-transition: all var(--main-transition);
+}
+.about-content .container .text:hover h3 {
+  color: var(--second-background-color);
+}
+
+@media (max-width: 991px) {
+  .about-content .container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+@media (max-width: 679px) {
+  .about-content .container .text p {
+    font-size: 20px;
+  }
+  .about-content .container .text:nth-child(1) {
+    order: 1;
+  }
+  .about-content .container .text:nth-child(2) {
+    order: 2;
+  }
+  .about-content .container .text:nth-child(3) {
+    order: 4;
+  }
+  .about-content .container .text:nth-child(4) {
+    order: 3;
+  }
+  .about-content .container .text:nth-child(5) {
+    order: 5;
+  }
+  .about-content .container .text:nth-child(6) {
+    order: 6;
+  }
+  .about-content .container .text:nth-child(7) {
+    order: 8;
+  }
+  .about-content .container .text:nth-child(8) {
+    order: 7;
+  }
+}
+.about-content .container .image {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.about-content .container .image img {
   width: 100%;
   height: 100%;
   max-width: 100%;
