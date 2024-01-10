@@ -1456,6 +1456,52 @@ a.button {
   max-width: 100%;
   max-height: 100%;
 }
+@media (max-width: 991px) {
+  .arabic-content .container .text:nth-child(1) {
+    order: 1;
+  }
+  .arabic-content .container .text:nth-child(2) {
+    order: 2;
+  }
+  .arabic-content .container .text:nth-child(3) {
+    order: 3;
+  }
+  .arabic-content .container .text:nth-child(4) {
+    order: 5;
+  }
+  .arabic-content .container .text:nth-child(5) {
+    order: 4;
+  }
+  .arabic-content .container .text:nth-child(6) {
+    order: 6;
+  }
+  .arabic-content .container .text:nth-child(7) {
+    order: 7;
+  }
+  .arabic-content .container .text:nth-child(8) {
+    order: 9;
+  }
+  .arabic-content .container .text:nth-child(9) {
+    order: 8;
+  }
+}
+.arabic-content .container .text h3 {
+  font-size: 25px;
+}
+.arabic-content .container .text p {
+  line-height: 1.4;
+  font-size: 18px;
+}
+.arabic-content .container .text h3 {
+  transition: all var(--main-transition);
+  -webkit-transition: all var(--main-transition);
+  -moz-transition: all var(--main-transition);
+  -ms-transition: all var(--main-transition);
+  -o-transition: all var(--main-transition);
+}
+.arabic-content .container .text:hover h3 {
+  color: var(--second-background-color);
+}
 /*  end this for arabic page  */
 /* start  this for about  page  */
 
@@ -1473,6 +1519,8 @@ a.button {
 .about-content .container .text {
   line-height: 1.8;
   font-size: 25px;
+}
+.about-content .container .text h3 {
   transition: all var(--main-transition);
   -webkit-transition: all var(--main-transition);
   -moz-transition: all var(--main-transition);
