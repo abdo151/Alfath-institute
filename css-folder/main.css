@@ -489,6 +489,27 @@ a.button {
   font-weight: bold;
   border-radius: 10px;
 }
+.button-Enroll-via-page {
+  display: block;
+  background-color: hsl(213.68deg 58.76% 19.02%);
+  padding: 20px;
+  margin: 5px auto;
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 300px;
+  margin-bottom: 30px;
+  transition: var(--main-transition-duration);
+  -webkit-transition: var(--main-transition-duration);
+  -moz-transition: var(--main-transition-duration);
+  -ms-transition: var(--main-transition-duration);
+  -o-transition: var(--main-transition-duration);
+}
+.button-Enroll-via-page:hover {
+  background-color: var(--second-background-color);
+}
 /* RESPONSIVE style */
 /* Responsive styles */
 @media (max-width: 1024px) {
